@@ -20,6 +20,8 @@ public class DoEWithFor {
         int width;
         char pen;
         int thickness;
+        int i;
+        int col;
         // -------------------------------------------------------------- INPUT
         // TEMPORARY HARD-CODED "input"
         height = 14;
@@ -37,6 +39,12 @@ public class DoEWithFor {
         //          function of width, height, thickness
         //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         // 1) TOP HORIZONTAL
+        for (i = 0; i < 2; i++) {
+            for (col = 0; col < width; col++) {
+                System.out.print(pen);
+            }
+            System.out.println();
+        }
 
 
         // 2) TOP VERTICAL
