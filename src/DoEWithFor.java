@@ -21,13 +21,30 @@ public class DoEWithFor {
         char pen;
         int thickness;
         int i;
-        int col;
+        int j;
+        int topVertHeight;
+        int bottomVertHeight;
+        int midWidth;
         // -------------------------------------------------------------- INPUT
         // TEMPORARY HARD-CODED "input"
         height = 14;
         width = 15;
         pen = 'X';
         thickness = 2;
+
+        //calculate top vertical height
+        topVertHeight = (height - 3) / 2;
+
+        //calculate bottom vertical height
+        if (height % 2 == 0){
+            bottomVertHeight = topVertHeight +1;
+        }
+        else {
+            bottomVertHeight = topVertHeight;
+        }
+        //calculate middle horizontal length
+        midWidth = width / 2;
+
         // --------------------------------------------------- DRAW THE 5 LINES
         // RULES FOR E's
         //      - all lines are 2 X's thick
@@ -40,24 +57,32 @@ public class DoEWithFor {
         //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         // 1) TOP HORIZONTAL
         for (i = 0; i < 2; i++) {
-            for (col = 0; col < width; col++) {
+            for (j = 0; j < width; j++) {
                 System.out.print(pen);
             }
             System.out.println();
         }
-
-
         // 2) TOP VERTICAL
-
-
+        for (i = 0; i < topVertHeight; i++){
+            System.out.println(pen + pen);
+        }
         // 3) MIDDLE HORIZONTAL
-
-
+        for (i = 0; i < 2; i++) {
+            for (j = 0; j < midWidth; j++) {
+                System.out.print(pen);
+            }
+            System.out.println();
+        }
         // 4) BOTTOM VERTICAL
-
-
+        for (i = 0; i < bottomVertHeight; i++){
+            System.out.println(pen + pen);
+        }
         // 5) BOTTOM HORIZONTAL
-
-
+        for (i = 0; i < 2; i++) {
+            for (j = 0; j < width; j++) {
+                System.out.print(pen);
+            }
+            System.out.println();
+        }
     }
 }
