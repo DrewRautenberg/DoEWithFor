@@ -28,7 +28,6 @@ public class DoEWithFor {
         int topVertHeight;
         int bottomVertHeight;
         int midWidth;
-        int sudoHeight;
         // -------------------------------------------------------------- INPUT
         // TEMPORARY HARD-CODED "input"
         //height = 14;
@@ -44,8 +43,7 @@ public class DoEWithFor {
 
 
         //calculate top vertical height
-        //height= sudoHeight*2;
-        topVertHeight = (height - (3 * thickness)) / 2;
+        topVertHeight = (height - (6 *thickness)) / 2;
 
         //calculate bottom vertical height
         if (height % 2 == 0) {
