@@ -1,5 +1,5 @@
 /* PROJECT:  DoEWithFor       (draw a big E using FOR loops)
- * AUTHOR: ___________________________      DESIGNER:  Dr. Kaminski
+ * AUTHOR: Drew Rautenberg      DESIGNER:  Dr. Kaminski
  * DESCRIPTION:  Programs draws a big letter E (in console window) based on
  *      user-supplied parameters (dialog boxes):
  *              drawingChar, penThickness, charHeight, charWidth.
