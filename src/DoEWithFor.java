@@ -1,3 +1,5 @@
+import javax.swing.*;
+
 /* PROJECT:  DoEWithFor       (draw a big E using FOR loops)
  * AUTHOR: ___________________________      DESIGNER:  Dr. Kaminski
  * DESCRIPTION:  Programs draws a big letter E (in console window) based on
@@ -19,7 +21,7 @@ public class DoEWithFor {
         int height;
         int width;
         char pen;
-        //int thickness;
+        int thickness;
         int i;
         int j;
         int topVertHeight;
@@ -30,17 +32,22 @@ public class DoEWithFor {
         height = 14;
         width = 15;
         pen = 'X';
-        //thickness = 2;
+        thickness = 2;
 
+/*
+        height = Integer.parseInt(JOptionPane.showInputDialog("Enter Height"));
+        width = Integer.parseInt(JOptionPane.showInputDialog("Enter Width"));
+        pen = JOptionPane.showInputDialog("Character to print with").charAt(0);
+*/
         //calculate top vertical height
         topVertHeight = (height - 6) / 2;
 
         //calculate bottom vertical height
         if (height % 2 == 0){
-            bottomVertHeight = topVertHeight +1;
+            bottomVertHeight = topVertHeight;
         }
         else {
-            bottomVertHeight = topVertHeight;
+            bottomVertHeight = topVertHeight+1;
         }
         //calculate middle horizontal length
         midWidth = width / 2;
@@ -56,37 +63,39 @@ public class DoEWithFor {
         //          function of width, height, thickness
         //- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         // 1) TOP HORIZONTAL
-        for (i = 0; i < 2; i++) {
+        for (i = 0; i < 4; i++) {
             for (j = 0; j < width; j++) {
                 System.out.print(pen);
             }
             System.out.println();
         }
         // 2) TOP VERTICAL
-        for (i = 0; i < topVertHeight; i++){
+        for (i = 0; i < topVertHeight * 2; i++){
             System.out.print(pen);
             System.out.print(pen);
             System.out.println();
         }
         // 3) MIDDLE HORIZONTAL
-        for (i = 0; i < 2; i++) {
+        for (i = 0; i < 4; i++) {
             for (j = 0; j < midWidth; j++) {
                 System.out.print(pen);
             }
             System.out.println();
         }
         // 4) BOTTOM VERTICAL
-        for (i = 0; i < bottomVertHeight; i++){
+        for (i = 0; i < bottomVertHeight * 2; i++){
             System.out.print(pen);
             System.out.print(pen);
             System.out.println();
         }
         // 5) BOTTOM HORIZONTAL
-        for (i = 0; i < 2; i++) {
+        for (i = 0; i < 4; i++) {
             for (j = 0; j < width; j++) {
                 System.out.print(pen);
             }
             System.out.println();
         }
+
+        System.out.println("Height: " + height);
     }
 }
