@@ -15,11 +15,11 @@ public class DoEWithFor {
 
     public static void main(String[] args) {
         // ---------------------------------------------------------- VARIABLES
-        String userInput;
+        //String userInput;
         int height;
         int width;
         char pen;
-        int thickness;
+        //int thickness;
         int i;
         int j;
         int topVertHeight;
@@ -30,10 +30,10 @@ public class DoEWithFor {
         height = 14;
         width = 15;
         pen = 'X';
-        thickness = 2;
+        //thickness = 2;
 
         //calculate top vertical height
-        topVertHeight = (height - 3) / 2;
+        topVertHeight = (height - 6) / 2;
 
         //calculate bottom vertical height
         if (height % 2 == 0){
@@ -64,7 +64,9 @@ public class DoEWithFor {
         }
         // 2) TOP VERTICAL
         for (i = 0; i < topVertHeight; i++){
-            System.out.println(pen + pen);
+            System.out.print(pen);
+            System.out.print(pen);
+            System.out.println();
         }
         // 3) MIDDLE HORIZONTAL
         for (i = 0; i < 2; i++) {
@@ -75,7 +77,9 @@ public class DoEWithFor {
         }
         // 4) BOTTOM VERTICAL
         for (i = 0; i < bottomVertHeight; i++){
-            System.out.println(pen + pen);
+            System.out.print(pen);
+            System.out.print(pen);
+            System.out.println();
         }
         // 5) BOTTOM HORIZONTAL
         for (i = 0; i < 2; i++) {
