@@ -99,7 +99,5 @@ public class DoEWithFor {
             }
             System.out.println();
         }
-
-        System.out.println("Height: " + height);
     }
 }
